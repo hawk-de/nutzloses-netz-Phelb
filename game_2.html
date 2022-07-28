@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Game 2</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div id="someDiv"></div>
+    </header>
+    <main id="ghost">
+      <p>Touch the ghost!</p>
+      <!-- BOOOO YOU SCARED YET???-->
+      <div id="canvasForHTML"></div>
+    </main>
+    <footer>
+      <button type="button" class="butt" onclick="next('game_3.html')">
+        next
+      </button>
+    </footer>
+    <!--TIK TAK TIK TAK...-->
+    <script>
+      let timeleft = 30;
+      let elem = document.getElementById('someDiv');
+
+      let timerId = setInterval(countdown, 1000);
+      function countdown() {
+        if (timeleft == -1) {
+          clearTimeout(timerId);
+        } else {
+          elem.innerHTML = timeleft + ' seconds remaining';
+          timeleft--;
+          if (timeleft == 0) {
+            window.location = 'game_3.html';
+          }
+        }
+      }
+    </script>
+    <script src="script.js"></script>
+  </body>
+  <!-- Let's hope by  now you cannot win this, right? -->
+</html>
