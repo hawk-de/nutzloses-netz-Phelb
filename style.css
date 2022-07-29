@@ -1,23 +1,54 @@
-html {
-  font-size: 100%;
-} /*16px*/
-
 body {
-  background-color: white;
-  display: flex;
-  margin: 0 0;
-  color: #1d2429;
+  background-color: #fbcfe8;
+  margin: 0;
+  height: 80%;
 }
-/*
- see A Complete Guide to Flexbox
-  https://css-tricks.com/snippets/css/a-guide-to-flexbox/
- */
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+html {
+  height: 80%;
+  width: 100%;
 }
-.flex-item {
-  align-self: center;
+.butt {
+  background-color: aquamarine;
+  font-size: xx-large;
+  font-style: normal;
+  border-radius: 8px;
+  font-family: monospace;
+  padding: 10px 20px;
+  box-shadow: 0 8px 16px #c95daf;
+}
+
+header {
+  text-align: right;
+  background-color: #7fffd4;
+  border: none;
+}
+#someDiv {
+  font-size: xx-large;
+  font-family: monospace;
+  padding: 10px;
+  color: rgb(0, 0, 0);
+}
+
+main {
+  height: max-content;
+  font-family: monospace;
+  font-size: xx-large;
+  object-position: 50% 50%;
+  border: none;
+  padding: 10px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+footer {
+  text-align: right;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
 }

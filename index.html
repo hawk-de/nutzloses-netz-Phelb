@@ -1,26 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Starter</title>
-    <meta name="description" content="something" />
-    <meta name="author" content="me" />
-    <link href="style.css" rel="stylesheet"/>
-    <style>
-
-    </style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1st_Game</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="container">
-    <div id="sketch" class="flex-item"></div>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.min.js"
-      integrity="sha512-NxocnqsXP3zm0Xb42zqVMvjQIktKEpTIbCXXyhBPxqGZHqhcOXHs4pXI/GoZ8lE+2NJONRifuBpi9DxC58L0Lw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script src="index.js"></script>
+  <body>
+    <header><div id="someDiv" onload="countdown()"></div></header>
+    <main>
+      <!--Don't  continue  reading bc that's cheating ok?! -->
+      <p>
+        Clicking the <a href="game_2.html">button </a> brings you to the next
+        level
+      </p>
+      <img src="IMG/Button.png" alt="" width="200px" class="center" />
+    </main>
+    <footer>
+      <button type="button" class="butt">next</button>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+      let timeleft = 30;
+      let elem = document.getElementById('someDiv');
+
+      let timerId = setInterval(countdown, 1000);
+      function countdown() {
+        if (timeleft == -1) {
+          clearTimeout(timerId);
+        } else {
+          elem.innerHTML = timeleft + ' seconds remaining';
+          timeleft--;
+          if (timeleft == 0) {
+            window.location = 'game_2.html';
+          }
+        }
+      }
+    </script>
   </body>
 </html>
